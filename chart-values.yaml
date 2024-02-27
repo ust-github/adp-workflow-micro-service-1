@@ -1,0 +1,14 @@
+image:
+  repository: registry.ustpace.com/docker-sandbox/adp-workflow-micro-service-1
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: adp-workflow-micro-service-1-testest.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
